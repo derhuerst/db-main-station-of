@@ -1,7 +1,7 @@
 {
 	"name": "db-main-station-of",
 	"description": "Given a stop ID, get the main station ID.",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"main": "index.json",
 	"files": [
 		"index.json"

@@ -10,3 +10,16 @@ notifications:
 script:
   - 'npm run build'
   - 'npm test'
+after_script:
+  - 'ls -lh index.json'
+before_deploy:
+  - 'npm i semver --no-save'
+  - 'npm version --no-git-tag-version --force $(./node_modules/.bin/semver -i minor $(npm info db-main-station-of version))'
+deploy:
+  provider: npm
+  on:
+    branch: master
+    node: stable
+  email: 'mail@jannisr.de'
+  api_key: ${NPM_KEY}
+  skip_cleanup: true
