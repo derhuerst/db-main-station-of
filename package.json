@@ -1,0 +1,33 @@
+{
+	"name": "db-main-station-of",
+	"description": "Given a stop ID, get the main station ID.",
+	"version": "0.1.0",
+	"main": "index.json",
+	"files": [
+		"index.json"
+	],
+	"keywords": [
+		"station",
+		"stop",
+		"id",
+		"main",
+		"hafas"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/db-main-station-of",
+	"repository": "derhuerst/db-main-station-of",
+	"bugs": "https://github.com/derhuerst/db-main-station-of/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+	},
+	"scripts": {
+		"build": "node build.js >index.json",
+		"test": "env NODE_ENV=dev node test.js",
+		"prepublishOnly": "npm run build && npm test"
+	}
+}
